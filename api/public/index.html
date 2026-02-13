@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Simple Store - BankID Checkout</title>
+    <link rel="stylesheet" href="site.css" />
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Simple Store</h1>
+    </header>
+
+    <div class="container">
+      <h2>Products</h2>
+      <div id="products"></div>
+
+      <div id="checkout-section">
+        <button onclick="checkout()">Checkout</button>
+
+        <div id="bankid-options" style="display: none">
+          <button onclick="openSameDevice()">Open BankID on this device</button>
+          <button onclick="showQR()">Use another device</button>
+        </div>
+
+        <div id="qr-container" style="margin-top: 20px"></div>
+        <div id="status"></div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
